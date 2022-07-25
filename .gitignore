@@ -1,0 +1,5 @@
+.env
+.next.confi.js
+/.next
+.yarn.lock
+/node_modules
