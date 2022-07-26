@@ -13,6 +13,7 @@ const HeadCommon: React.FC<IHeadProps> = ({title}) => {
             <meta name="description" content='Day la mo ta' key="description"/>
             <link rel="canonical" href={`${URL}${router?.asPath}`}/>
             <meta property="og:url" content={`${URL}${router?.asPath}`}/>
+            <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
         </Head>
     );
 };
