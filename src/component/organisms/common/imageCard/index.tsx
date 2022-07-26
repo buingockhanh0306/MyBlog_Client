@@ -37,7 +37,14 @@ const ImageCard: React.FC<IImageCardProps> = ({data}) => {
                             justifyContent={'space-between'}
                             px={'10px'}
                         >
-                            <Text letterSpacing={'1.4px'} fontWeight={'medium'}>{item.categoryName}</Text>
+                            <Text
+                                letterSpacing={'1.4px'}
+                                fontWeight={'medium'}
+                                _hover={{cursor: 'pointer'}}
+                                onClick={()=>router.push(`/home/detail/${item.slug}`)}
+                            >
+                                {item.categoryName}
+                            </Text>
                             <Text fontSize={'xs'}>{readingTime(item.content)+' phút đọc'}</Text>
                         </Flex>
                         <HeadingChakra

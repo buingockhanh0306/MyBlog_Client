@@ -10,8 +10,6 @@ import {
     IconButton, Image,
     Text, useDisclosure
 } from "@chakra-ui/react";
-import {data} from "./mock";
-import {convertToSlug} from "../../../../utils/convertToSlug";
 import {useRouter} from "next/router";
 import {categoriesService} from "../../../../services";
 import {FaBars} from "react-icons/fa";
@@ -128,7 +126,15 @@ const LayoutCommon = ({children}) => {
 
                </Flex>
            </Box>
-           <Image alt={'banner'} mt={'68px'} mb={'40px'} w={"100%"} height={'200px'} src={'https://thumbs.dreamstime.com/b/computer-cogs-technology-background-blue-banner-old-new-using-circuits-old-machine-31582628.jpg'}/>
+           <Image
+               alt={'banner'}
+               mt={'68px'}
+               mb={'40px'}
+               w={"100%"}
+               height={'200px'}
+               src={'/images/banner.jpg'}
+               objectFit={'cover'}
+           />
            {children}
        </Box>
     );

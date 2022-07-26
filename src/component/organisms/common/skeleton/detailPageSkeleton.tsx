@@ -6,7 +6,7 @@ const DetailPageSkeleton = () => {
     const renderLine = (numberLine: number)=>{
         const arr = []
         for(let i = 0; i<numberLine; i++){
-            arr.push(<Skeleton h={'14px'} w={i===numberLine-1 ? '40%': '100%'} my={'20px'}/>)
+            arr.push(<Skeleton h={'14px'} key={i} w={i===numberLine-1 ? '40%': '100%'} my={'20px'}/>)
         }
         return arr
     }

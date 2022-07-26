@@ -9,6 +9,9 @@ import HeadingPage from "@src/component/molecules/common/headingPage";
 import {ItemPerPage} from "@src/utils/itemPerPage";
 import SkeletonIndex from "@src/component/organisms/common/skeleton";
 import HeadCommon from "@src/component/molecules/common/headCommon";
+// @ts-ignore
+import MessengerCustomerChat from 'react-messenger-customer-chat';
+
 
 const HomePage = () => {
     const [posts, setPosts] = useState([])
@@ -29,7 +32,7 @@ const HomePage = () => {
     },[currentPage])
     return (
         <>
-            <HeadCommon title={'Trang chủ'}/>
+            <HeadCommon title={'My Blog'}/>
             {!loading ?
             <Box w={'100%'}>
                 <Box padding={'0 6vw'}>
@@ -53,6 +56,10 @@ const HomePage = () => {
                             />}
                         </GridItem>
                     </Grid>
+                    <MessengerCustomerChat
+                        pageId="105436068727274"
+                        appId="357791826543032"
+                    />
                 </Box>
             </Box> : <SkeletonIndex/>}
         </>

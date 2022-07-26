@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     const isAuth = storageService.get('isAuth')
 
     useEffect(()=>{
-        if(!isAuth){
+        if(!isAuth && pageProps.layout === LayoutType.Admin){
             router.push('/admin/login')
         }
     }, [])

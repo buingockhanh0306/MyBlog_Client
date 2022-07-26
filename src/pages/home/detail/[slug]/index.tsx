@@ -8,11 +8,13 @@ import {postsService} from "@src/services";
 import SidebarDetail from "@src/component/organisms/common/SidebarDetail";
 import DetailPageSkeleton from "@src/component/organisms/common/skeleton/detailPageSkeleton";
 import HeadCommon from "@src/component/molecules/common/headCommon";
+import ArrowToTop from "@src/component/molecules/common/arrowToTop";
 
 const DetailPost = () => {
     const router = useRouter()
     const slug = String(router.query.slug)
     const [loading, setLoading] = useState<boolean>(true)
+    const [positionPage, setPositionPage] = useState<number>(0)
     const [post, setPost] = useState({
         title: '',
         slug: '',
@@ -40,6 +42,12 @@ const DetailPost = () => {
         getPosts()
     },[slug])
 
+    useEffect(()=>{
+        window.addEventListener('scroll', ()=>{
+            setPositionPage(window.scrollY)
+        })
+    },[])
+
     return (
         <>
             <HeadCommon title={post.title}/>
@@ -60,6 +68,7 @@ const DetailPost = () => {
 
                 </Grid>
             </Box> : <DetailPageSkeleton/>}
+            {positionPage > 500 && <ArrowToTop/>}
         </>
 
     );

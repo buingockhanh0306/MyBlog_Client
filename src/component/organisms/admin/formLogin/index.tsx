@@ -39,6 +39,7 @@ const FormLogin: React.FC<IFormLoginProps> = ({onSubmit, msgError}) => {
         }
     }
 
+
     return (
         <Flex
             w='100%'
@@ -87,7 +88,6 @@ const FormLogin: React.FC<IFormLoginProps> = ({onSubmit, msgError}) => {
                     placeholder={'Mật khẩu'}
                     onChange={(e: React.FormEvent<HTMLInputElement>)=>handleChangePassword(e)}
                 />
-
                <ButtonSolid text={'Đăng nhập'} onClick={()=>handleSubmit()} size={'md'}/>
             </Flex>
         </Flex>

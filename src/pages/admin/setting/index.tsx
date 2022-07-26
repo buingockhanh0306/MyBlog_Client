@@ -18,7 +18,7 @@ const Setting = () =>{
             <HeadAdmin title={'Cài đặt'}/>
             <Box padding={{md: 'auto', base: '10px'}}>
                 <HeadingChakra text={t('setting')}/>
-                <Flex gap={4} alignItems={'center'}>
+                <Flex ml={'30px'} gap={4} alignItems={'center'}>
                     <HeadingChakra text={t('language')} fontSize={'lg'} />
                     <Menu>
                         <MenuButton
@@ -43,6 +43,18 @@ const Setting = () =>{
                     </Menu>
                 </Flex>
             </Box>
+
+            {/*<Box padding={{md: 'auto', base: '10px'}}>*/}
+            {/*    <HeadingChakra text={t('settingSEO')}/>*/}
+            {/*    <Box ml={'30px'}>*/}
+            {/*        <InputText text={t('title')} value={''} placeholder={t('titlePlaceholder')}/>*/}
+            {/*        <InputText text={t('description')} value={''} placeholder={t('descPlaceholder')}/>*/}
+            {/*    </Box>*/}
+            {/*    <Flex justifyContent={'flex-end'} gap={4} mt={'40px'}>*/}
+            {/*        <ButtonOutline text={t('reset')}/>*/}
+            {/*        <ButtonSolid text={t('done')}/>*/}
+            {/*    </Flex>*/}
+            {/*</Box>*/}
         </>
        );
 };
