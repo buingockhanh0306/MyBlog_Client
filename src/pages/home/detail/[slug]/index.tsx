@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {GetStaticProps} from "next";
 import {LayoutType} from "@src/types/LayoutType";
 import {useRouter} from "next/router";
-import {Box, Grid, GridItem} from "@chakra-ui/react";
+import {Box, Grid, GridItem, Progress} from "@chakra-ui/react";
 import DetailPage from "@src/component/organisms/common/detailPage";
 import {postsService} from "@src/services";
 import SidebarDetail from "@src/component/organisms/common/SidebarDetail";
@@ -48,6 +48,7 @@ const DetailPost = () => {
         })
     },[])
 
+
     return (
         <>
             <HeadCommon title={post.title}/>
@@ -74,7 +75,7 @@ const DetailPost = () => {
     );
 };
 
-export default DetailPost;
+export default DetailPost
 
 export const getStaticProps: GetStaticProps = async () => {
     return {

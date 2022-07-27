@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import {GetStaticProps} from "next";
 import {LayoutType} from "@src/types/LayoutType";
 import {Box, Divider, Grid, GridItem} from "@chakra-ui/react";
 import ImageCard from "@src/component/organisms/common/imageCard";

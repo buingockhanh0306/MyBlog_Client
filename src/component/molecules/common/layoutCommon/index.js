@@ -7,7 +7,7 @@ import {
     DrawerOverlay,
     Flex,
     Heading,
-    IconButton, Image,
+    IconButton, Image, Progress,
     Text, useDisclosure
 } from "@chakra-ui/react";
 import {useRouter} from "next/router";
@@ -16,14 +16,26 @@ import {FaBars} from "react-icons/fa";
 
 const LayoutCommon = ({children}) => {
     const router = useRouter()
+    const [loading, setLoading] = useState(true)
+    const [positionPage, setPositionPage] = useState(0)
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [categories, setCategories] = useState([])
     const getData = async () =>{
         const categoriesData = await categoriesService.get(0)
         setCategories(categoriesData.data)
+        setLoading(false)
     }
     useEffect(()=>{
         getData()
+    },[])
+
+    const onScroll =()=>{
+        const winScroll = window.document.documentElement.scrollTop
+        const height =  window.document.documentElement.scrollHeight - window.document.documentElement.clientHeight
+        setPositionPage(winScroll / height * 100)
+    }
+    useEffect(()=>{
+        window.addEventListener('scroll', onScroll)
     },[])
 
     const handleClickSideBar = (slug)=>{
@@ -113,6 +125,7 @@ const LayoutCommon = ({children}) => {
                         ))}
                     </Box>
 
+
                    <Drawer placement={'left'} onClose={onClose} isOpen={isOpen} size={'full'}>
                        <DrawerOverlay />
                        <DrawerContent  color={'primaryColor'}>
@@ -126,9 +139,19 @@ const LayoutCommon = ({children}) => {
 
                </Flex>
            </Box>
+           <Progress
+               colorScheme='blue'
+               size='sm'
+               value={positionPage}
+               position={'fixed'}
+               top={'68px'}
+               left={0}
+               right={0}
+               isIndeterminate={loading}
+           />
            <Image
                alt={'banner'}
-               mt={'68px'}
+               mt={'76px'}
                mb={'40px'}
                w={"100%"}
                height={'200px'}
