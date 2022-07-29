@@ -13,6 +13,7 @@ import {ICategoryProps} from "@src/types/categoryType";
 import {AiOutlineDelete, AiTwotoneEdit} from "react-icons/ai";
 import {GetDate} from "@src/utils/getDate";
 import {useTranslation} from "react-i18next";
+import IconButtonChakra from "@src/component/atoms/admin/Button/IconButtonChakra";
 
 const CategoriesList:React.FC<ICategoryProps> = ({categories, onDelete, onEdit}) => {
     const { t } = useTranslation('categoriesLocale')
@@ -37,34 +38,16 @@ const CategoriesList:React.FC<ICategoryProps> = ({categories, onDelete, onEdit})
                 </Thead>
                 <Tbody>
                     {categories?.map((item, index)=>(
-                        <Tr key={index}>
+                        <Tr key={item.slug}>
                             <Td>{index+1}</Td>
                             <Td>{item.name}</Td>
                             <Td>{item.slug}</Td>
                             <Td>{GetDate(String(item.updatedAt))}</Td>
                             <Td>
-                                <IconButton
-                                    color={'primaryColor'}
-                                    aria-label=''
-                                    size={'md'}
-                                    icon={<AiTwotoneEdit/>}
-                                    bgColor={'transparent'}
-                                    _hover={{bgColor: 'transparent'}}
-                                    _active={{bgColor: 'transparent'}}
-                                    onClick={()=>handleEdit(item.slug)}
-                                />
+                                <IconButtonChakra icon={<AiTwotoneEdit/>} onClick={()=>handleEdit(item.slug)}/>
                             </Td>
                             <Td>
-                                <IconButton
-                                    color={'primaryColor'}
-                                    aria-label=''
-                                    size={'md'}
-                                    icon={<AiOutlineDelete/>}
-                                    bgColor={'transparent'}
-                                    _hover={{bgColor: 'transparent'}}
-                                    _active={{bgColor: 'transparent'}}
-                                    onClick={()=>handleDelete(item.slug)}
-                                />
+                                <IconButtonChakra icon={<AiOutlineDelete/>} onClick={()=>handleDelete(item.slug)}/>
                             </Td>
                         </Tr>
                     ))}

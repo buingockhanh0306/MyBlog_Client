@@ -41,7 +41,7 @@ const SkeletonIndex: React.FC = ():JSX.Element => {
             <Box padding={'0 6vw'}>
                 <Flex justifyContent={'space-between'} alignItems={'center'} mb={'60px'}>
                     <Skeleton h={'50px'} w={'300px'}/>
-                    <Skeleton h={'20px'} w={'240px'}/>
+                    <Skeleton h={'20px'} w={'240px'} display={{base: 'none', md:'block'}}/>
                 </Flex>
                 <Grid
                     h='200px'

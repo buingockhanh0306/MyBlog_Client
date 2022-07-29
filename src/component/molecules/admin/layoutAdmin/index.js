@@ -50,8 +50,8 @@ const LayoutAdmin = ({children}) => {
     }
 
     const renderSidebar = (color, colorHover, bgColorHover)=>{
-        return sidebarItem.map((item, index)=>(
-            <Box key={index}>
+        return sidebarItem.map((item)=>(
+            <Box key={item.path}>
                 <Button
                     leftIcon={item.icon}
                     bgColor={findPath(item.path) ? 'white' : 'transparent'}

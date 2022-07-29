@@ -165,7 +165,7 @@ const CreatePostForm: React.FC<IAddPostProps> = ({onSubmit, categories}) => {
                 >
                     <MenuOptionGroup type='radio' onChange={(value)=>handleChangeCategory(value)}>
                         {categories.map((category, index)=>(
-                            <MenuItemOption key={index} value={category._id}>{category.name}</MenuItemOption>
+                            <MenuItemOption key={category._id} value={category._id}>{category.name}</MenuItemOption>
                         ))}
                     </MenuOptionGroup>
                 </MenuList>

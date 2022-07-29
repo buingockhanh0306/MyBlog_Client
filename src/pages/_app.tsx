@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app'
-import {ChakraProvider} from "@chakra-ui/provider";
+import {ChakraProvider} from "@chakra-ui/react";
 import {themes} from "@src/themes/index";
 import LayoutAdmin from '@src/component/molecules/admin/layoutAdmin';
 import LayoutCommon from '@src/component/molecules/common/layoutCommon';

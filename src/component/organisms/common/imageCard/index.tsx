@@ -17,7 +17,7 @@ const ImageCard: React.FC<IImageCardProps> = ({data}) => {
         <Flex flexWrap={'wrap'}>
             {
                 data.map((item, index)=>(
-                    <Flex key={index} flexDirection={'column'} w={{md: '33%', base: '100%'}} mb={'40px'} px={'26px'}>
+                    <Flex key={item.slug} flexDirection={'column'} w={{md: '33%', base: '100%'}} mb={'40px'} px={'26px'}>
                         <Image
                             rounded={'4px'}
                             w={'100%'}

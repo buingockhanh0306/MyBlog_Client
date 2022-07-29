@@ -23,11 +23,12 @@ const CategoryName = () => {
     const categoryName = router.query.categoryName?.slice(0,-8)
     const page_size = 6
     const getData = async () =>{
-        const postsData = await postsService.get(currentPage)
+        const postsData = await postsService.get(0)
 
         //Lọc bài viết có danh mục = categoryName
         const filterPosts = postsData.data.posts.filter((item: any)=> item.categoryName.toLowerCase() == categoryName)
         setPosts(filterPosts)
+        console.log(filterPosts)
         setTotal(filterPosts.length)
         setItemPerPage(ItemPerPage(filterPosts.length, currentPage, page_size))
         setLoading(false)

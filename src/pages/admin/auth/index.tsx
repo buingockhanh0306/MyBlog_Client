@@ -10,7 +10,7 @@ import {
     DrawerContent,
     DrawerFooter,
     DrawerHeader,
-    DrawerOverlay, useDisclosure
+    DrawerOverlay, useDisclosure, useToast
 } from "@chakra-ui/react";
 import {BsPlusLg} from "react-icons/bs";
 import {useRouter} from "next/router";
@@ -28,6 +28,7 @@ import HeadAdmin from "@src/component/molecules/admin/headAdmin";
 
 const AuthPage = () => {
     const { t } = useTranslation('authLocale')
+    const toast = useToast()
     const [loading, setLoading] = useState<boolean>(true)
     const router = useRouter()
     const { isOpen, onOpen, onClose } = useDisclosure()

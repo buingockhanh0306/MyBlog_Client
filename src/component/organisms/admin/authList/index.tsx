@@ -30,7 +30,7 @@ const AuthList: React.FC<IAuthListProps> = ({auths, onDelete}) => {
                 </Thead>
                 <Tbody>
                     {auths?.map((item, index)=>(
-                        <Tr key={index}>
+                        <Tr key={item.username}>
                             <Td>{index+1}</Td>
                             <Td>{item.username}</Td>
                             <Td>{GetDate(String(item.updatedAt))}</Td>

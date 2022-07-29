@@ -16,9 +16,9 @@ const SidebarDetail: React.FC<ISidebarDetailProps> = ({data}) => {
         <Box px={'8px'}>
             <HeadingHome text={'Đề xuất'} fontSize={'lg'}/>
             {
-                data.map((item, index)=>(
+                data.map((item)=>(
                     <Flex
-                        key={index}
+                        key={item.slug}
                         mb={'12px'}
                         gap={3}
                         rounded={'md'}

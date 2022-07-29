@@ -41,9 +41,9 @@ const HomePage = () => {
                 />
                 <Divider colorScheme={'primaryColor'} mb={'40px'}/>
                 <Grid
-                    h='200px'
+                    h='auto'
                     w={'100%'}
-                    templateRows='repeat(2, 1fr)'
+                    templateRows='repeat(1, 1fr)'
                     templateColumns='repeat(12, 1fr)'
                 >
                   <GridItem colSpan={12}>

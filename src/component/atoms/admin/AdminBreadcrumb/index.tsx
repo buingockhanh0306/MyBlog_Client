@@ -20,9 +20,9 @@ const AdminBreadcrumb:React.FC<ILink> = ({link}) => {
            {
                link.map((item, index)=> {
                    if(item.isCurrent){
-                       return <Text key={index}>{item.text}</Text>
+                       return <Text key={item.href}>{item.text}</Text>
                    }
-                   return <Link key={index} href={item.href || ""}>{item.text}</Link>
+                   return <Link key={item.href} href={item.href || ""}>{item.text}</Link>
                })
            }
        </Flex>

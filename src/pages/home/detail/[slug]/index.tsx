@@ -55,9 +55,8 @@ const DetailPost = () => {
             {!loading ?
             <Box padding={'0 6vw'}>
                 <Grid
-                    h='2000px'
                     w={'100%'}
-                    templateRows='repeat(2, 1fr)'
+                    templateRows='repeat(1, 1fr)'
                     templateColumns='repeat(12, 1fr)'
                 >
                     <GridItem colSpan={{md: 9, base: 12}}>

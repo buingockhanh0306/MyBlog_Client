@@ -13,10 +13,10 @@ const PostsList: React.FC<IPostProps> = ({posts}) => {
     const imageURL = process.env.NEXT_PUBLIC_IMAGE_URL
     return (
         <Box mt={'40px'}>
-            {posts?.map((post, index)=>(
+            {posts?.map((post)=>(
                 <Flex
                     flexDirection={{md: 'row', base: 'column'}}
-                    key={index}
+                    key={post.slug}
                     gap={6}
                     my={{md: '30px', base: '60px'}}
                 >
