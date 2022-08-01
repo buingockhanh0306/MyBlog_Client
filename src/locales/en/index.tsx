@@ -1,1 +1,1 @@
-export * from '../en/admin/index.locale'
+export * from '../en/admin/index.locale';

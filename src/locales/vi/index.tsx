@@ -1,1 +1,1 @@
-export * from '../vi/admin/index.locale'
+export * from '../vi/admin/index.locale';

@@ -1,8 +1,8 @@
-export interface IButton{
+export interface IButton {
     isLoading?: boolean,
-    leftIcon?: any,
+    leftIcon?: JSX.Element,
     text: string,
-    onClick?: ()=>void,
+    onClick?: () => void,
     size?: string,
     width?: string
 }

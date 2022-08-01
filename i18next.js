@@ -8,18 +8,18 @@ import * as vi from './src/locales/vi';
 export const languageDefault = 'vi';
 
 i18n.use(LanguageDetector).use(initReactI18next).init({
-    resources: {
-        en,
-        vi
-    },
-    lng: languageDefault,
-    fallbackLng: languageDefault,
-    detection: {
-        order: ['localStorage', 'navigator'],
-        lookupQuerystring: 'lng',
-        lookupLocalStorage: languageDefault,
-        caches: ['localStorage']
-    },
+  resources: {
+    en,
+    vi
+  },
+  lng: languageDefault,
+  fallbackLng: languageDefault,
+  detection: {
+    order: ['localStorage', 'navigator'],
+    lookupQuerystring: 'lng',
+    lookupLocalStorage: languageDefault,
+    caches: ['localStorage']
+  }
 });
 
 export { i18n };

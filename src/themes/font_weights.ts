@@ -7,5 +7,5 @@ export const fontWeights = {
   semibold: 600,
   bold: 700,
   extrabold: 800,
-  black: 900,
+  black: 900
 };

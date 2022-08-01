@@ -11,7 +11,7 @@ import { sizes } from './sizes';
 import { space } from './space';
 
 const fonts = {
-  body: '"Noto Sans JP", sans-serif',
+  body: '"Noto Sans JP", sans-serif'
 };
 
 export const themes = extendTheme({
@@ -24,13 +24,13 @@ export const themes = extendTheme({
   letterSpacings,
   space,
   sizes,
-  radii,
+  radii
 },
 withDefaultColorScheme({
   colorScheme: 'blue',
-  components: ['Button', 'Badge'],
+  components: ['Button', 'Badge']
 }),
 withDefaultSize({
   size: 'lg',
-  components: ['Button', 'Badge'],
+  components: ['Button', 'Badge']
 }));
