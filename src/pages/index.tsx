@@ -11,7 +11,7 @@ import HeadCommon from '@src/component/molecules/common/headCommon';
 // @ts-ignore
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 
-const HomePage = () => {
+const HomePage: React.FC = (): JSX.Element => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [total, setTotal] = useState<number>(0);

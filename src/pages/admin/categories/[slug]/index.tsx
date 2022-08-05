@@ -49,6 +49,7 @@ const SlugDetail = () => {
       router.push('/admin/categories/');
     }
   };
+
   return (
     <>
       <HeadAdmin title={'Chỉnh sửa danh mục'} />

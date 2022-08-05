@@ -47,7 +47,6 @@ const HeaderCommon: React.FC<IHeaderProps> = ({
         zIndex={10}
       >
         <Flex
-          // justifyContent={'space-around'}
           alignItems={'center'}
           h={'100%'}
           px={'24px'}

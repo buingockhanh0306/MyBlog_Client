@@ -50,7 +50,7 @@ const LayoutAdmin: React.FC<ILayoutAdminProps> = ({ children }) => {
     { text: t('postsManager'), icon: <FaRegEdit />, path: '/admin/posts' },
     { text: t('accountManager'), icon: <FaUsersCog />, path: '/admin/auth' },
     { text: t('setting'), icon: <AiFillSetting />, path: '/admin/setting' },
-    { text: t('goToHome'), icon: <ImHome />, path: '/home' }
+    { text: t('goToHome'), icon: <ImHome />, path: '/' }
   ];
 
   const handleOnClick = (path: string) => {

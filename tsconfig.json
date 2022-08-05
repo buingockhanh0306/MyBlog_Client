@@ -20,12 +20,14 @@
       "@styles/*": ["styles/*"],
       "@public/*": ["public/*"],
       "@locales/*": ["src/locales/*"],
-      //      "@types/*": ["src/types/*"]
     }
+  },
+  "resolve": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx", ".cjs"],
   },
   "include": [
     "next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": [
     "node_modules"
-  ]
+  ],
 }

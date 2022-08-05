@@ -22,7 +22,7 @@ const FooterCommon: React.FC<IFooterProps> = ({ data }) => {
         {data.map((item) => (
           <Link
             key={item.slug}
-            href={item.name === 'Gmail' ? `mailto:${item.url}` : item.url}
+            href={item.name === 'Email' ? `mailto:${item.url}` : item.url}
           >
             <Image
               display={'inline'}
