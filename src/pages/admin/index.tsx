@@ -1,14 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { GetStaticProps } from 'next';
 import { LayoutType } from '@src/types/LayoutType';
 import HeadAdmin from '@src/component/molecules/admin/headAdmin';
+import { Box } from '@chakra-ui/react';
+import CountBlock, { ITotalProps } from '@src/component/organisms/admin/countBlock';
+import { dashboardService } from '@src/services';
 
-const Admin = () => {
+const Admin: React.FC = (): JSX.Element => {
+  const [dataChart, setDataChart] = useState();
+  const [total, setTotal] = useState<ITotalProps[]>([]);
+
+  const getDataTotal = async () => {
+    const apiData = await dashboardService.get();
+    setTotal(apiData.data.total);
+    setDataChart(apiData.data.chart);
+  };
+
+  useEffect(() => {
+    getDataTotal();
+    console.log({ total });
+  }, []);
   return (
-    <div>
+    <Box>
       <HeadAdmin title={'Admin'} />
-      <div>Đây là trang Admin</div>
-    </div>
+      <Box>
+        <CountBlock data={total}/>
+      </Box>
+    </Box>
   );
 };
 
