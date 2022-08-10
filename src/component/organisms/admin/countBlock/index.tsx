@@ -7,7 +7,7 @@ export interface ITotalProps{
     count: number
   }[]
 }
-const CountBlock: React.FC<ITotalProps> = ({ data }) => {
+const CountBlock: React.FC<ITotalProps> = ({ data }): JSX.Element => {
   return (
     <Flex justifyContent={'space-around'} gap={6}>
       {data?.map(item => (

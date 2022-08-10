@@ -8,7 +8,7 @@ import { dashboardService } from '@src/services';
 
 const Admin: React.FC = (): JSX.Element => {
   const [dataChart, setDataChart] = useState();
-  const [total, setTotal] = useState<ITotalProps[]>([]);
+  const [total, setTotal] = useState();
 
   const getDataTotal = async () => {
     const apiData = await dashboardService.get();
@@ -24,7 +24,7 @@ const Admin: React.FC = (): JSX.Element => {
     <Box>
       <HeadAdmin title={'Admin'} />
       <Box>
-        <CountBlock data={total}/>
+        {total && <CountBlock data={total}/>}
       </Box>
     </Box>
   );
